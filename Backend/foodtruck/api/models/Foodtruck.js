@@ -11,7 +11,7 @@ module.exports = {
     nombre_ft: {
       type: 'string',
       minLength: 3,
-      maxLength: 15,
+      maxLength: 10,
       required: true
     },
     latitud_ft: {
@@ -31,7 +31,7 @@ module.exports = {
       minLength: 5,
       maxLength: 10,
     },
-    contrasenia_ft:{
+    contrasenia_ft: {
       type: 'string',
       required: true,
       unique: true,
@@ -40,8 +40,8 @@ module.exports = {
       encrypt: true
     },
     id_prs: {         // Nombre del fk para la relación
-      model: 'persona'   // Nombre del modelo a relacionar (padre) 
-      // required: true   // OPCIONAL-> Simpre se ingrese el fk
+      model: 'persona',   // Nombre del modelo a relacionar (padre) 
+      required: true   // OPCIONAL-> Simpre se ingrese el fk
     }
   },
 };
