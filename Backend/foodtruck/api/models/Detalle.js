@@ -17,6 +17,9 @@ module.exports = {
     id_pd: {
       model: 'pedido'
     },
+    id_cmd: {
+      model: 'comida'
+    },
   },
 
 };
