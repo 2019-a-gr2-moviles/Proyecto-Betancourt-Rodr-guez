@@ -37,8 +37,6 @@ module.exports = {
       model: 'persona',   // Nombre del modelo a relacionar (padre) 
       required: true   // OPCIONAL-> Simpre se ingrese el fk
     }
-
   },
-
 };
 
