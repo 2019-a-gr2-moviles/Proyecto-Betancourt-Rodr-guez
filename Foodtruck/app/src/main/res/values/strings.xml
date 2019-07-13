@@ -5,4 +5,5 @@
         <item>Cliente</item>
         <item>Foodtruck</item>
     </string-array>
+    <string name="title_activity_add_platos">AddPlatosActivity</string>
 </resources>
