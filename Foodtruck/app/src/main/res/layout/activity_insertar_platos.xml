@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".InsertarPlatosActivity" android:background="#ffffff">
+        tools:context=".actividades.InsertarPlatosActivity" android:background="#ffffff">
 
     <LinearLayout
             android:orientation="vertical"
