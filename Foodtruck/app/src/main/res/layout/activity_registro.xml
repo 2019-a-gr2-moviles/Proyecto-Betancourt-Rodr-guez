@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText3"
+                android:id="@+id/txt_nombre_cliente"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"/>
         <TextView
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText4"
+                android:id="@+id/txt_apellido_cliente"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"/>
         <TextView
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
-                android:id="@+id/editText9"
+                android:id="@+id/txt_cedula_cliente"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"/>
         <TextView
@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:ems="10"
-                android:id="@+id/editText10"
+                android:id="@+id/txt_fecha_cliente"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"/>
         <TextView
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
                 android:ems="10"
-                android:id="@+id/editText7"
+                android:id="@+id/txt_usuario_cliente"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"/>
         <TextView
@@ -103,13 +103,13 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText11"
+                android:id="@+id/txt_contrasena_cliente"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"/>
         <Button
                 android:text="Registrarme"
                 android:layout_width="150dp"
-                android:layout_height="wrap_content" android:id="@+id/button3"
+                android:layout_height="wrap_content" android:id="@+id/btn_registrarme_cliente"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/alegreya_sc"

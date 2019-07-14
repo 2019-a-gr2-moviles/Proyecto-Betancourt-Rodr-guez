@@ -13,7 +13,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val spinner = findViewById(R.id.spinner) as Spinner
+        val spinner = findViewById(R.id.spinner_usuario) as Spinner
 
         val adapter = ArrayAdapter.createFromResource(
             this,

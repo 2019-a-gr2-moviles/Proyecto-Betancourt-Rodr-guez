@@ -50,7 +50,7 @@
                 android:layout_marginTop="16dp"/>
         <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/textView14" android:layout_weight="1"
+                android:layout_height="wrap_content" android:id="@+id/txt_usuario_detalle" android:layout_weight="1"
                 android:layout_gravity="center"
                 android:fontFamily="@font/alegreya_sc"
                 android:textSize="18sp" android:textColor="#000000"/>
@@ -73,7 +73,7 @@
                     android:textAlignment="center"/>
             <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/textView19" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:id="@+id/txt_valor_detalle" android:layout_weight="1"
                     android:layout_gravity="center"
                     android:fontFamily="@font/alegreya_sc"
                     android:textSize="18sp" android:textColor="#000000"
@@ -86,7 +86,7 @@
             <Button
                     android:text="Aceptar"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/button5" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:id="@+id/btn_aceptar" android:layout_weight="1"
                     android:layout_gravity="center"
                     android:fontFamily="@font/alegreya_sc"
                     android:textSize="18sp" android:textColor="#000000"
@@ -96,7 +96,7 @@
             <Button
                     android:text="Cambiar"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/button6" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:id="@+id/btn_cambiar" android:layout_weight="1"
                     android:layout_gravity="center"
                     android:fontFamily="@font/alegreya_sc"
                     android:textSize="18sp" android:textColor="#000000"
@@ -111,6 +111,6 @@
             android:layout_height="392dp" tools:layout_editor_absoluteY="162dp" tools:layout_editor_absoluteX="8dp">
         <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" android:id="@+id/rv_detalle"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
