@@ -4,6 +4,7 @@ package com.example.foodtruck.servidor
 class Servidor {
 
     companion object {
+        
         private val ip = "192.168.0.1"
         private val puerto = "1337"
 
