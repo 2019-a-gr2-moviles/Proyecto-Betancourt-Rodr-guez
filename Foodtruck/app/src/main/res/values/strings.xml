@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Foodtruck</string>
+
+    <string-array name="spinner_arreglo">
+        <item>Cliente</item>
+        <item>Foodtruck</item>
+    </string-array>
+    <string name="title_activity_add_platos">AddPlatosActivity</string>
 </resources>

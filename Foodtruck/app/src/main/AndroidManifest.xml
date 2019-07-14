@@ -9,6 +9,18 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity
+                android:name=".AddPlatosActivity"
+                android:label="@string/title_activity_add_platos"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".DespacharActivity">
         </activity>
         <activity android:name=".PendienteActivity">
@@ -16,8 +28,6 @@
         <activity android:name=".ActualizarPlatosActivity">
         </activity>
         <activity android:name=".InsertarPlatosActivity">
-        </activity>
-        <activity android:name=".AddPlatosActivity">
         </activity>
         <activity android:name=".CrearFoodtruckActivity">
         </activity>
@@ -31,15 +41,12 @@
         </activity>
         <activity android:name=".MapaActivity">
         </activity>
-        <activity android:name=".PrincipalActivity">
-        </activity>
         <activity android:name=".RegistroActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts"/>
     </application>
 
 </manifest>
