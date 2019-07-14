@@ -2,6 +2,7 @@ package com.example.foodtruck.servidor
 
 // archivo ubicado en .gitignore
 class Servidor {
+
     companion object {
         private val ip = "192.168.0.1"
         private val puerto = "1337"
