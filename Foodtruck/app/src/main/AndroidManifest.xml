@@ -10,38 +10,38 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".AddPlatosActivity"
+                android:name=".actividades.AddPlatosActivity"
                 android:label="@string/title_activity_add_platos"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".HomeActivity">
+        <activity android:name=".actividades.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".DespacharActivity">
+        <activity android:name=".actividades.DespacharActivity">
         </activity>
-        <activity android:name=".PendienteActivity">
+        <activity android:name=".actividades.PendienteActivity">
         </activity>
-        <activity android:name=".ActualizarPlatosActivity">
+        <activity android:name=".actividades.ActualizarPlatosActivity">
         </activity>
-        <activity android:name=".InsertarPlatosActivity">
+        <activity android:name=".actividades.InsertarPlatosActivity">
         </activity>
-        <activity android:name=".CrearFoodtruckActivity">
+        <activity android:name=".actividades.CrearFoodtruckActivity">
         </activity>
-        <activity android:name=".CompraTarjetaActivity">
+        <activity android:name=".actividades.CompraTarjetaActivity">
         </activity>
-        <activity android:name=".ChatActivity">
+        <activity android:name=".actividades.ChatActivity">
         </activity>
-        <activity android:name=".DetalleActivity">
+        <activity android:name=".actividades.DetalleActivity">
         </activity>
-        <activity android:name=".MenuActivity">
+        <activity android:name=".actividades.MenuActivity">
         </activity>
-        <activity android:name=".MapaActivity">
+        <activity android:name=".actividades.MapaActivity">
         </activity>
-        <activity android:name=".RegistroActivity">
+        <activity android:name=".actividades.RegistroActivity">
         </activity>
 
         <meta-data

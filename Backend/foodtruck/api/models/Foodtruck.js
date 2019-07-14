@@ -43,7 +43,7 @@ module.exports = {
       model: 'persona',   // Nombre del modelo a relacionar (padre) 
       required: true   // OPCIONAL-> Simpre se ingrese el fk
     },
-    comidaDeFoodtruck:{  // Nombre atributo de la relación
+    comidaFoodtruck:{  // Nombre atributo de la relación
       collection: 'comida', // Nombre del modelo a relacionar
       via: 'id_ft'        // Nombre del campo a hacer la relacion
     },

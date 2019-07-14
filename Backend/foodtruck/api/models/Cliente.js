@@ -28,7 +28,7 @@ module.exports = {
       minLength: 1,
       allowNull: true
     },
-    longitud_ft: {
+    longitud_cl: {
       type: 'string',
       minLength: 1,
       allowNull: true,
@@ -36,7 +36,11 @@ module.exports = {
     id_prs: {         // Nombre del fk para la relación
       model: 'persona',   // Nombre del modelo a relacionar (padre) 
       required: true   // OPCIONAL-> Simpre se ingrese el fk
-    }
+    },
+    pedidoCliente:{  // Nombre atributo de la relación
+      collection: 'pedido', // Nombre del modelo a relacionar
+      via: 'id_cl'        // Nombre del campo a hacer la relacion
+    },
   },
 };
 

@@ -1,10 +1,10 @@
-package com.example.foodtruck
+package com.example.foodtruck.actividades
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-
+import com.example.foodtruck.R
 
 
 class HomeActivity : AppCompatActivity() {

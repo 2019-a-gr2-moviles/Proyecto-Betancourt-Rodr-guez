@@ -24,7 +24,7 @@ module.exports = {
       maxLength: 100,
       allowNull: true
     },
-    detalleDeComida:{  // Nombre atributo de la relación
+    detalleComida:{  // Nombre atributo de la relación
       collection: 'detalle', // Nombre del modelo a relacionar
       via: 'id_cmd'        // Nombre del campo a hacer la relacion
     },

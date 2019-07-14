@@ -1,12 +1,13 @@
-package com.example.foodtruck
+package com.example.foodtruck.actividades
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.foodtruck.R
 
-class ChatActivity : AppCompatActivity() {
+class AddPlatosActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat)
+        setContentView(R.layout.activity_add_platos)
     }
 }

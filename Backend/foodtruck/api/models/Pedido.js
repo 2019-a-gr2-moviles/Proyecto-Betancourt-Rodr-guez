@@ -25,7 +25,7 @@ module.exports = {
     id_cl: {
       model: 'cliente'
     },
-    detalleDePedido:{  // Nombre atributo de la relación
+    detallePedido:{  // Nombre atributo de la relación
       collection: 'detalle', // Nombre del modelo a relacionar
       via: 'id_pd'        // Nombre del campo a hacer la relacion
     },
