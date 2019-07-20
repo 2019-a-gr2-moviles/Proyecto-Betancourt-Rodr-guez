@@ -7,7 +7,6 @@ import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.example.foodtruck.R
 import com.example.foodtruck.clases.foodtruck.FoodtruckCUD
-import com.example.foodtruck.clases.persona.Persona
 import com.example.foodtruck.clases.persona.PersonaCUD
 import com.example.foodtruck.clases.persona.PersonaR
 import com.example.foodtruck.servidor.Servidor
@@ -19,12 +18,15 @@ import java.lang.Exception
 
 class CrearFoodtruckActivity : AppCompatActivity() {
 
-    private var listaPersonas = arrayListOf<PersonaR>()
+//    private var listaPersonas = arrayListOf<PersonaR>()
+//    private var personaAux: PersonaR? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crear_foodtruck)
-//        obtenerListaPersonas()
+//        obtenerPersona("1718057688")
+
         btn_crear_foodtruck.setOnClickListener {
+//            Log.i("http", "${personaAux!!.cedula}")
             try {
                 val persona = PersonaCUD(
                     -1,
@@ -33,38 +35,57 @@ class CrearFoodtruckActivity : AppCompatActivity() {
                     txt_cedula_foodtruck.text.toString(),
                     txt_fecha_foodtruck.text.toString()
                 )
-
                 val foodtruck = FoodtruckCUD(
-                    persona.cedula,
+                    persona.id,
                     0,
                     txt_nombre_foodtruck.text.toString(),
                     "",
                     "",
                     txt_usuario_foodtruck.text.toString(),
                     txt_contrasenia_foodtruck.text.toString()
-
                 )
+
                 try {
-                    insertarPersona(persona)
+//                    insertarPersona(persona)
+//                    obtenerPersona(persona.cedula)
+//                    foodtruck.id_prs = personaAux!!.id
+                    insertarFoodtruck(foodtruck)
                 } catch (e: Exception) {
-                    Log.i("http", "CATCH 2: $e")
+//                    obtenerPersonas()
+//                    foodtruck.id_prs = idPersona(persona.cedula)
+//                    obtenerPersona(persona.cedula)
+//                    foodtruck.id_prs = personaAux!!.id
+//                    insertarFoodtruck(foodtruck)
+
                 }
 
-                insertarFoodtruck(foodtruck)
             } catch (e: Exception) {
                 Log.i("http", "CATCH : $e")
             }
         }
     }
 
-    fun insertarFoodtruck(foodtruck: FoodtruckCUD) {
+//    private fun idPersona(cedula: String): Int {
+//        val persona = listaPersonas.find {
+//            it.cedula == cedula
+//        }
+//
+//        if (persona != null) {
+//            return persona.id
+//        } else {
+//            return -1
+//        }
+//    }
+
+    private fun insertarFoodtruck(foodtruck: FoodtruckCUD) {
 
         val url = Servidor.url("foodtruck")
         val json = """
-            {
-                "cedula": "${foodtruck.cedula}",             
+            {        
                 "nombre_ft": "${foodtruck.nombre_ft}",
                 "usuario_ft": "${foodtruck.usuario_ft}",
+                "latitud_ft": "0",
+                "longitud_ft": "0",
                 "contrasenia_ft": "${foodtruck.contrasenia_ft}"
             }
                     """
@@ -78,6 +99,8 @@ class CrearFoodtruckActivity : AppCompatActivity() {
                         Log.i("http", "Error: ${ex.message}")
                     }
                     is Result.Success -> {
+                        val data = result.get()
+
                         runOnUiThread {
                             irLogin()
                         }
@@ -86,15 +109,8 @@ class CrearFoodtruckActivity : AppCompatActivity() {
             }
     }
 
-    fun existePersona(persona: Persona): PersonaR {
-        val personaAux: PersonaR? = listaPersonas.find { personaAux: PersonaR ->
-            persona.cedula == personaAux.cedula
-        }
-        return personaAux!!
-    }
-
-    fun insertarPersona(persona: PersonaCUD) {
-
+    private fun insertarPersona(persona: PersonaCUD) {
+        var id: Int = -1
         val url = Servidor.url("persona")
         val json = """
             {
@@ -112,15 +128,41 @@ class CrearFoodtruckActivity : AppCompatActivity() {
                     is Result.Failure -> {
                         val ex = result.getException()
                         Log.i("http", "Error: ${ex.message}")
+
                     }
                     is Result.Success -> {
-                        irLogin()
+                        val data = result.get()
+//                        val persona = Klaxon().parse<Persona>(data)
+//                        obtenerPersonas()
                     }
                 }
             }
     }
 
-    fun irLogin() {
+//    fun obtenerPersona(cedula: String) {
+//
+//        val url = Servidor.url("persona") + "?cedula=$cedula"
+//        Log.i("http", url)
+//        url.httpGet()
+//            .responseString { request, response, result ->
+//                when (result) {
+//                    is Result.Failure -> {
+//                        val ex = result.getException()
+//                        Log.i("http", "Error: ${ex.message}")
+//                    }
+//                    is Result.Success -> {
+//                        val data = result.get()
+//                        Log.i("http", "Data personaaaaaaaaaaaaaaaaaaa: ${data}")
+//
+//                        listaPersonas = Klaxon()
+//                            .parseArray<PersonaR>(data)!! as ArrayList<PersonaR>
+//
+//                    }
+//                }
+//            }
+//    }
+
+    private fun irLogin() {
         val intent = Intent(
             this,
             HomeActivity::class.java
@@ -128,24 +170,4 @@ class CrearFoodtruckActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun obtenerListaPersonas() {
-        val url = Servidor.url("persona")
-        Log.i("http", url)
-        url.httpGet()
-            .responseString { request, response, result ->
-                when (result) {
-                    is Result.Failure -> {
-                        val ex = result.getException()
-                        Log.i("http", "Error: ${ex.message}")
-                    }
-                    is Result.Success -> {
-                        val data = result.get()
-                        Log.i("http", "Data: ${data}")
-
-                        listaPersonas = Klaxon()
-                            .parseArray<PersonaR>(data)!! as ArrayList<PersonaR>
-                    }
-                }
-            }
-    }
 }
