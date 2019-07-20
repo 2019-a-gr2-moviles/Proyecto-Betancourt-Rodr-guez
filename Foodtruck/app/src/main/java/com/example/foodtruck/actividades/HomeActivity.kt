@@ -1,10 +1,12 @@
 package com.example.foodtruck.actividades
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.example.foodtruck.R
+import kotlinx.android.synthetic.main.activity_home.*
 
 
 class HomeActivity : AppCompatActivity() {
@@ -21,5 +23,18 @@ class HomeActivity : AppCompatActivity() {
         )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
+
+        btn_registrar_foodtruck.setOnClickListener {
+            irCrearFoodtruck()
+        }
+
+    }
+
+    fun irCrearFoodtruck() {
+        val intent = Intent(
+            this,
+            CrearFoodtruckActivity::class.java
+        )
+        startActivity(intent)
     }
 }

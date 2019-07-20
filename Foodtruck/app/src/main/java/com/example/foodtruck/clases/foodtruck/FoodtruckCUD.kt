@@ -1,7 +1,7 @@
 package com.example.foodtruck.clases.foodtruck
 
 class FoodtruckCUD(
-    val id_prs: Int,
+    var cedula: String,
     id: Int = -1,
     nombre_ft: String,
     latitud_ft: String,

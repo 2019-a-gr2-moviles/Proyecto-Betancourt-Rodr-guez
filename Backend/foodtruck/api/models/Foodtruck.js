@@ -34,12 +34,11 @@ module.exports = {
     contrasenia_ft: {
       type: 'string',
       required: true,
-      unique: true,
       minLength: 7,
       maxLength: 10,
       encrypt: true
     },
-    id_prs: {         // Nombre del fk para la relación
+    cedula: {         // Nombre del fk para la relación
       model: 'persona',   // Nombre del modelo a relacionar (padre) 
       required: true   // OPCIONAL-> Simpre se ingrese el fk
     },
