@@ -10,7 +10,7 @@ module.exports = {
   attributes: {
     nombre_cmd: {
       type: 'string',
-      minLength: 5,
+      minLength: 4,
       maxLength: 15,
       required: true,
     },
@@ -19,7 +19,7 @@ module.exports = {
       min: 0,
       required: true
     },
-    description: {
+    descripcion: {
       type: 'string',
       maxLength: 100,
       allowNull: true

@@ -40,7 +40,7 @@ module.exports = {
  //   clientePersona: {     // Nombre atributo de la relación
  //     collection: 'cliente', // Nombre del modelo a relacionar
 ///      via: 'id_prs'        // Nombre del campo a hacer la relacion
-    },
+    //},
   },
 };
 

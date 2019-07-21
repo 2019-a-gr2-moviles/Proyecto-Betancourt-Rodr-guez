@@ -8,7 +8,7 @@ class ComidaR2(
     nombre_cmd: String,
     precio_cmd: Double,
     descripcion: String,
-    val id_ft: Int
+    var id_ft: Int
     ) : Comida(
     id, nombre_cmd, precio_cmd, descripcion
 ) {

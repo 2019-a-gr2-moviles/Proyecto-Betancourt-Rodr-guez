@@ -8,8 +8,8 @@ class ComidaR(
     nombre_cmd: String,
     precio_cmd: Double,
     descripcion: String,
-    val id_ft: Foodtruck,
-    val detalleComida: ArrayList<Detalle>?
+    var id_ft: Foodtruck?,
+    var detalleComida: ArrayList<Detalle>? = arrayListOf<Detalle>()
 ) : Comida(
     id, nombre_cmd, precio_cmd, descripcion
 ) {
