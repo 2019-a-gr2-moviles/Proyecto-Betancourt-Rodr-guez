@@ -1,6 +1,6 @@
 package com.example.foodtruck.adaptadores
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -15,12 +15,12 @@ import com.example.foodtruck.clases.comida.ComidaR
 class AdaptadorComidaFoodtruck(
     private val listaComida: ArrayList<ComidaR>,
     private val contexto: AddPlatosActivity,
-    private val recyclerView: RecyclerView,
+    private val recyclerView: androidx.recyclerview.widget.RecyclerView,
     private val idFoodtruck: Int
 ) :
-    RecyclerView.Adapter<AdaptadorComidaFoodtruck.MyViewHolder>() {
+    androidx.recyclerview.widget.RecyclerView.Adapter<AdaptadorComidaFoodtruck.MyViewHolder>() {
 
-    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    inner class MyViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
         var nombreTextView: TextView
         var precioTextView: TextView
         var descripcionTextView: TextView
