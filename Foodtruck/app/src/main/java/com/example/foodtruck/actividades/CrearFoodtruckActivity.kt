@@ -110,7 +110,6 @@ class CrearFoodtruckActivity : AppCompatActivity() {
     }
 
     private fun insertarPersona(persona: PersonaCUD) {
-        var id: Int = -1
         val url = Servidor.url("persona")
         val json = """
             {

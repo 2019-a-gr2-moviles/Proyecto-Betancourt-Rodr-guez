@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".actividades.AddPlatosActivity" android:background="#ffffff" android:orientation="vertical">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp" android:id="@+id/txv_nombre_comida"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/alegreya_sc"
+            android:textSize="24sp" android:textColor="#000000" android:textAlignment="center"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/txv_id_comida" android:textColor="#00000000"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="98dp">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="189dp"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="Precio:"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp" android:id="@+id/textView34" android:textSize="20sp"
+                    android:textColor="#F3252525"/>
+            <TextView
+                    android:text="Descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/textView35" android:textSize="20sp"
+                    android:textColor="#F3252525"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp" android:id="@+id/txv_precio_comida" android:textSize="20sp"
+                    android:textAlignment="center"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:id="@+id/txv_descripcion_comida"
+                    android:textSize="20sp" android:textAlignment="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageButton
+                android:layout_width="88dp"
+                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_menu_edit"
+                android:id="@+id/btn_modificar_plato" android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"/>
+        <ImageButton
+                android:layout_width="73dp"
+                android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_delete"
+                android:id="@+id/btn_eliminar_plato" android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginRight="20dp"/>
+    </LinearLayout>
+</LinearLayout>
