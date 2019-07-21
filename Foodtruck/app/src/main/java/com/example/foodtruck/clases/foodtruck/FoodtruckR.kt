@@ -1,6 +1,7 @@
 package com.example.foodtruck.clases.foodtruck
 
 import com.example.foodtruck.clases.comida.Comida
+import com.example.foodtruck.clases.comida.ComidaR2
 import com.example.foodtruck.clases.persona.Persona
 
 class FoodtruckR(
@@ -10,8 +11,8 @@ class FoodtruckR(
     longitud_ft: String,
     usuario_ft: String,
     contrasenia_ft: String,
-    val id_prs: Persona,
-    val comidaFoodtruck: ArrayList<Comida>?
+//    val id_prs: Persona,
+    val comidaDeFoodtruck: ArrayList<ComidaR2>?
 ) : Foodtruck(
     id, nombre_ft, latitud_ft, longitud_ft, usuario_ft, contrasenia_ft
 ) {

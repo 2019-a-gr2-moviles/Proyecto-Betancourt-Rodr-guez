@@ -5,21 +5,21 @@ class Servidor {
 
     companion object {
         
-        private val ip = "192.168.0.1"
+        private val ip = "192.168.0.103"
         private val puerto = "1337"
 
         fun url(ruta: String): String {
-            var ruta = ""
+            var rutaAux = ""
             when (ruta) {
-                "persona" -> ruta = "persona/"
-                "cliente" -> ruta = "cliente/"
-                "foodtruck" -> ruta = "foodtruck/"
-                "comida" -> ruta = "comida/"
-                "pedido" -> ruta = "pedido/"
-                "detalle" -> ruta = "detalle/"
-                else -> ruta = ""
+                "persona" -> rutaAux = "persona"
+                "cliente" -> rutaAux = "cliente"
+                "foodtruck" -> rutaAux = "foodtruck"
+                "comida" -> rutaAux = "comida"
+                "pedido" -> rutaAux = "pedido"
+                "detalle" -> rutaAux = "detalle"
+                else -> rutaAux = ""
             }
-            return "http://${ip}:${puerto}/ruta"
+            return "http://${ip}:${puerto}/${rutaAux}"
         }
     }
 }
