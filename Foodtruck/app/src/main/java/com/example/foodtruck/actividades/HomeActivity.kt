@@ -105,7 +105,7 @@ class HomeActivity : AppCompatActivity() {
                             foodtrucks.forEach { foodtruck ->
                                 if (foodtruck.contrasenia_ft == contrasenia) {
                                     runOnUiThread {
-                                        irAnadirPlato(foodtruck)
+                                        irAnadirPlato(foodtruck.id!!)
                                     }
                                 }
                             }
@@ -134,12 +134,13 @@ class HomeActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun irAnadirPlato(foodtruckR: FoodtruckR) {
+    private fun irAnadirPlato(idFoodtruck: Int) {
         val intent = Intent(
             this,
             AddPlatosActivity::class.java
         )
-        intent.putExtra("id_ft", foodtruckR.id)
+        Log.i("http", "enviandoooo ID  ${idFoodtruck}")
+        intent.putExtra("id_ft", idFoodtruck)
         startActivity(intent)
     }
 }
