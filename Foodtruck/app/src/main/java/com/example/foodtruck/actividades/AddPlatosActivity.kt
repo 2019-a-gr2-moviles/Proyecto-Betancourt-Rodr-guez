@@ -1,11 +1,11 @@
 package com.example.foodtruck.actividades
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.DefaultItemAnimator
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import com.beust.klaxon.Klaxon
 import com.example.foodtruck.R
@@ -38,13 +38,13 @@ class AddPlatosActivity : AppCompatActivity() {
     fun iniciarRecyclerView(
         listaComida: ArrayList<ComidaR>,
         actividad: AddPlatosActivity,
-        recyclerView: RecyclerView,
+        recyclerView: androidx.recyclerview.widget.RecyclerView,
         idFoodtruck: Int
     ) {
         val adaptadorComida = AdaptadorComidaFoodtruck(listaComida, actividad, recyclerView, idFoodtruck)
         rv_comida_foodtruck.adapter = adaptadorComida
-        rv_comida_foodtruck.itemAnimator = DefaultItemAnimator()
-        rv_comida_foodtruck.layoutManager = LinearLayoutManager(actividad)
+        rv_comida_foodtruck.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
+        rv_comida_foodtruck.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(actividad)
 
         adaptadorComida.notifyDataSetChanged()
     }
