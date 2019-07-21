@@ -33,10 +33,10 @@ module.exports = {
       minLength: 1,
       allowNull: true,
     },
-    id_prs: {         // Nombre del fk para la relación
-      model: 'persona',   // Nombre del modelo a relacionar (padre) 
-      required: true   // OPCIONAL-> Simpre se ingrese el fk
-    }
+   // id_prs: {         // Nombre del fk para la relación
+    //  model: 'persona',   // Nombre del modelo a relacionar (padre) 
+   //   required: true   // OPCIONAL-> Simpre se ingrese el fk
+   // }
   },
 };
 

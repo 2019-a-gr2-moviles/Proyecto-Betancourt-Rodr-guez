@@ -12,7 +12,7 @@ module.exports = {
     nombre_prs: {
       type: 'string',
       minLength: 3,
-      maxLength: 1,
+      maxLength: 15,
       required: true,
     },
     apellido_prs: {
@@ -33,13 +33,13 @@ module.exports = {
       maxLength: 10,
       required: true
     },
-    foodtruckDePersona: {     // Nombre atributo de la relación
-      collection: 'foodtruck', // Nombre del modelo a relacionar
-      via: 'id_prs'        // Nombre del campo a hacer la relacion
-    },
-    clientePersona: {     // Nombre atributo de la relación
-      collection: 'cliente', // Nombre del modelo a relacionar
-      via: 'id_prs'        // Nombre del campo a hacer la relacion
+   // foodtruckDePersona: {     // Nombre atributo de la relación
+ //     collection: 'foodtruck', // Nombre del modelo a relacionar
+  //    via: 'id_prs'       // Nombre del campo a hacer la relacion
+  //  },
+ //   clientePersona: {     // Nombre atributo de la relación
+ //     collection: 'cliente', // Nombre del modelo a relacionar
+///      via: 'id_prs'        // Nombre del campo a hacer la relacion
     },
   },
 };

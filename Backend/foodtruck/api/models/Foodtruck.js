@@ -34,15 +34,13 @@ module.exports = {
     contrasenia_ft: {
       type: 'string',
       required: true,
-      unique: true,
       minLength: 7,
-      maxLength: 10,
-      encrypt: true
+      maxLength: 10
     },
-    id_prs: {         // Nombre del fk para la relación
-      model: 'persona',   // Nombre del modelo a relacionar (padre) 
-      required: true   // OPCIONAL-> Simpre se ingrese el fk
-    },
+   // id_prs: {         // Nombre del fk para la relación
+   //   model: 'persona',   // Nombre del modelo a relacionar (padre) 
+   //   required: true   // OPCIONAL-> Simpre se ingrese el fk
+  //ø  },
     comidaDeFoodtruck:{  // Nombre atributo de la relación
       collection: 'comida', // Nombre del modelo a relacionar
       via: 'id_ft'        // Nombre del campo a hacer la relacion
