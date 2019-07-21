@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent" android:orientation="vertical"
+                                             android:id="@+id/linearLayout3">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="395dp"
+            android:layout_height="83dp" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="8dp">
+        <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" android:id="@+id/textView19"
+                android:fontFamily="@font/alegreya_sc"
+                android:textSize="22sp" android:textColor="#000000"
+                android:layout_gravity="center"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="22dp"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
