@@ -6,4 +6,5 @@
         <item>Foodtruck</item>
     </string-array>
     <string name="title_activity_add_platos">AddPlatosActivity</string>
+    <string name="title_activity_mapa">Map</string>
 </resources>

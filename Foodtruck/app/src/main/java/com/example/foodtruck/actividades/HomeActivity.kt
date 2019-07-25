@@ -1,7 +1,7 @@
 package com.example.foodtruck.actividades
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
@@ -45,7 +45,11 @@ class HomeActivity : AppCompatActivity() {
             val tipoUsuario = spinner_usuario.selectedItem.toString()
             Log.i("http", "$tipoUsuario //// $usuario  //// $contrasenia")
             if (tipoUsuario == "Cliente") {
-                verificarCliente(usuario, contrasenia)
+                // Este metodo se debe modificar para que lea los clientes
+//                verificarCliente(usuario, contrasenia)
+
+                //Prueba de mapa
+                irMapaFoodtrucks()
             } else {
                 verificarFoodtruck(usuario, contrasenia)
             }
@@ -141,6 +145,15 @@ class HomeActivity : AppCompatActivity() {
         )
         Log.i("http", "enviandoooo ID  ${idFoodtruck}")
         intent.putExtra("id_ft", idFoodtruck)
+        startActivity(intent)
+    }
+
+    fun irMapaFoodtrucks() {
+        val intent = Intent(
+            this,
+            MapaActivity::class.java
+        )
+
         startActivity(intent)
     }
 }
